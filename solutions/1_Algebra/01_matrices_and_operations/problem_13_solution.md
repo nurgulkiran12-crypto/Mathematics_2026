@@ -44,15 +44,30 @@ $$
 
 Comparing the entries of our matrix powers with the Fibonacci sequence ($0, 1, 1, 2, 3, 5, 8, \dots$):
 
-$F^1$ is $\begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}$
+For $F^1$:
+$$
+F^1 = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}
+$$
 
-$F^2$ is $\begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}$
+For $F^2$:
+$$
+F^2 = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}
+$$
 
-$F^3$ is $\begin{pmatrix} 3 & 2 \\ 2 & 1 \end{pmatrix}$
+For $F^3$:
+$$
+F^3 = \begin{pmatrix} 3 & 2 \\ 2 & 1 \end{pmatrix}
+$$
 
-$F^4$ is $\begin{pmatrix} 5 & 3 \\ 3 & 2 \end{pmatrix}$
+For $F^4$:
+$$
+F^4 = \begin{pmatrix} 5 & 3 \\ 3 & 2 \end{pmatrix}
+$$
 
-$F^5$ is $\begin{pmatrix} 8 & 5 \\ 5 & 3 \end{pmatrix}$
+For $F^5$:
+$$
+F^5 = \begin{pmatrix} 8 & 5 \\ 5 & 3 \end{pmatrix}
+$$
 
 **Observation:** Every entry in $F^n$ is a Fibonacci number! Specifically, the matrix power follows the general form:
 
@@ -64,7 +79,7 @@ $$
 
 ## Step 3: Performing a Recurrence Step
 
-Now let's multiply $F$ by a general vector $\begin{pmatrix} a \\ b \end{pmatrix}$:
+Now let's multiply $F$ by a general vector:
 
 $$
 F \begin{pmatrix} a \\ b \end{pmatrix} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} a \\ b \end{pmatrix} = \begin{pmatrix} (1 \cdot a + 1 \cdot b) \\ (1 \cdot a + 0 \cdot b) \end{pmatrix} = \begin{pmatrix} a + b \\ a \end{pmatrix}
