@@ -48,14 +48,23 @@ $$
 
 A **scalar** is just a regular number that multiplies every single entry inside the matrix. 
 
-1. **Multiply every entry of $A$ by $3$:**
-   $$3A = 3 \begin{pmatrix} 1 & 2 \\ -1 & 3 \end{pmatrix} = \begin{pmatrix} 3 \times 1 & 3 \times 2 \\ 3 \times (-1) & 3 \times 3 \end{pmatrix} = \begin{pmatrix} 3 & 6 \\ -3 & 9 \end{pmatrix}$$
+**1. Multiply every entry of $A$ by $3$:**
 
-2. **Multiply every entry of $B$ by $2$:**
-   $$2B = 2 \begin{pmatrix} 4 & -2 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 2 \times 4 & 2 \times (-2) \\ 2 \times 0 & 2 \times 5 \end{pmatrix} = \begin{pmatrix} 8 & -4 \\ 0 & 10 \end{pmatrix}$$
+$$
+3A = 3 \begin{pmatrix} 1 & 2 \\ -1 & 3 \end{pmatrix} = \begin{pmatrix} 3 \times 1 & 3 \times 2 \\ 3 \times (-1) & 3 \times 3 \end{pmatrix} = \begin{pmatrix} 3 & 6 \\ -3 & 9 \end{pmatrix}
+$$
 
-3. **Subtract the resulting matrices ($3A - 2B$):**
-   $$3A - 2B = \begin{pmatrix} 3 - 8 & 6 - (-4) \\ -3 - 0 & 9 - 10 \end{pmatrix} = \begin{pmatrix} -5 & 10 \\ -3 & -1 \end{pmatrix}$$
+**2. Multiply every entry of $B$ by $2$:**
+
+$$
+2B = 2 \begin{pmatrix} 4 & -2 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 2 \times 4 & 2 \times (-2) \\ 2 \times 0 & 2 \times 5 \end{pmatrix} = \begin{pmatrix} 8 & -4 \\ 0 & 10 \end{pmatrix}
+$$
+
+**3. Subtract the resulting matrices ($3A - 2B$):**
+
+$$
+3A - 2B = \begin{pmatrix} 3 - 8 & 6 - (-4) \\ -3 - 0 & 9 - 10 \end{pmatrix} = \begin{pmatrix} -5 & 10 \\ -3 & -1 \end{pmatrix}
+$$
 
 ---
 
