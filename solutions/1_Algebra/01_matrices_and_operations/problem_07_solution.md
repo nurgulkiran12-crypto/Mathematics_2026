@@ -58,9 +58,15 @@ $$
 
 * **The Identity Matrix ($I$):** Acts like the number $1$ in matrix multiplication. Multiplying any compatible matrix by $I$ leaves the matrix unchanged ($AI = IA = A$).
 * **The Zero Matrix ($0$):** Acts like the number $0$ in matrix addition. Adding it to any matrix leaves the matrix unchanged ($A + 0 = A$).
-* **Pattern in Successive Powers of $A$:**
-  * $A^1 = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix}$
-  * $A^2 = \begin{pmatrix} 4 & 4 \\ 0 & 4 \end{pmatrix}$
-  * $A^3 = \begin{pmatrix} 8 & 12 \\ 0 & 8 \end{pmatrix}$
-  
-  **General Pattern ($A^n$):** The diagonal entries are powers of $2$ ($2^n$), and the top-right entry follows the rule $n \cdot 2^{n-1}$. For general matrix powers of this form, $A^n = \begin{pmatrix} 2^n & n \cdot 2^{n-1} \\ 0 & 2^n \end{pmatrix}$.
+
+**Successive Powers of $A$:**
+
+$$
+A^1 = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix}, \qquad A^2 = \begin{pmatrix} 4 & 4 \\ 0 & 4 \end{pmatrix}, \qquad A^3 = \begin{pmatrix} 8 & 12 \\ 0 & 8 \end{pmatrix}
+$$
+
+**General Pattern ($A^n$):** The diagonal entries are powers of $2$ ($2^n$), and the top-right entry follows the rule $n \cdot 2^{n-1}$. For any positive integer $n$, the general formula is:
+
+$$
+A^n = \begin{pmatrix} 2^n & n \cdot 2^{n-1} \\ 0 & 2^n \end{pmatrix}
+$$
