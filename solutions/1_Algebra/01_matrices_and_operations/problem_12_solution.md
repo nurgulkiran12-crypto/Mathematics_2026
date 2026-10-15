@@ -37,6 +37,7 @@ $$
 ## Step 2: Formulating the Conjecture for $A^n$
 
 Looking at our computed powers:
+
 * $A^1 = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$
 * $A^2 = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$
 * $A^3 = \begin{pmatrix} 1 & 3 \\ 0 & 1 \end{pmatrix}$
