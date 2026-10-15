@@ -9,6 +9,7 @@ Given:
 $$
 A = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix}, \qquad B = \begin{pmatrix} 1 & 2 \\ -1 & 0 \\ 3 & 1 \end{pmatrix}
 $$
+
 Let the columns of $B$ be $b_1 = \begin{pmatrix} 1 \\ -1 \\ 3 \end{pmatrix}$ and $b_2 = \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix}$.
 
 ---
