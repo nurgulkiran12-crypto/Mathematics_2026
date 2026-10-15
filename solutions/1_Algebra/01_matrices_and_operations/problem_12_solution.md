@@ -14,19 +14,19 @@ $$
 
 ## Step 1: Computing Powers of $A$ ($A^2$, $A^3$, and $A^4$)
 
-1. **Computing $A^2 = A \times A$:**
+**1. Computing $A^2 = A \times A$:**
 
 $$
 A^2 = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} (1 \cdot 1 + 1 \cdot 0) & (1 \cdot 1 + 1 \cdot 1) \\ (0 \cdot 1 + 1 \cdot 0) & (0 \cdot 1 + 1 \cdot 1) \end{pmatrix} = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}
 $$
 
-2. **Computing $A^3 = A^2 \times A$:**
+**2. Computing $A^3 = A^2 \times A$:**
 
 $$
 A^3 = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} (1 \cdot 1 + 2 \cdot 0) & (1 \cdot 1 + 2 \cdot 1) \\ (0 \cdot 1 + 1 \cdot 0) & (0 \cdot 1 + 1 \cdot 1) \end{pmatrix} = \begin{pmatrix} 1 & 3 \\ 0 & 1 \end{pmatrix}
 $$
 
-3. **Computing $A^4 = A^3 \times A$:**
+**3. Computing $A^4 = A^3 \times A$:**
 
 $$
 A^4 = \begin{pmatrix} 1 & 3 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} (1 \cdot 1 + 3 \cdot 0) & (1 \cdot 1 + 3 \cdot 1) \\ (0 \cdot 1 + 1 \cdot 0) & (0 \cdot 1 + 1 \cdot 1) \end{pmatrix} = \begin{pmatrix} 1 & 4 \\ 0 & 1 \end{pmatrix}
@@ -38,10 +38,13 @@ $$
 
 Looking at our computed powers:
 
-* $A^1 = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$
-* $A^2 = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$
-* $A^3 = \begin{pmatrix} 1 & 3 \\ 0 & 1 \end{pmatrix}$
-* $A^4 = \begin{pmatrix} 1 & 4 \\ 0 & 1 \end{pmatrix}$
+$A^1$ is $\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$
+
+$A^2$ is $\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$
+
+$A^3$ is $\begin{pmatrix} 1 & 3 \\ 0 & 1 \end{pmatrix}$
+
+$A^4$ is $\begin{pmatrix} 1 & 4 \\ 0 & 1 \end{pmatrix}$
 
 **Conjecture:** For any positive integer $n$, the matrix power $A^n$ is given by:
 
