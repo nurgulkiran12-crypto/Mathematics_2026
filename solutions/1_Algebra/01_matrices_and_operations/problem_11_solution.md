@@ -9,6 +9,7 @@ Given:
 $$
 A = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}, \qquad B = \begin{pmatrix} a & b \\ c & d \end{pmatrix}
 $$
+
 ---
 
 ## Step 1: Compute the Product $AB$
@@ -52,24 +53,25 @@ $$
 $$
 
 Comparing corresponding entries gives four equations:
-1. Top-left: $a + c = a \implies c = 0$
-2. Bottom-left: $c = c$ (always true given $c = 0$)
-3. Bottom-right: $d = c + d \implies c = 0$ (matches our first condition)
-4. Top-right: $b + d = a + b \implies d = a$
+
+* Top-left: $a + c = a \implies c = 0$
+* Bottom-left: $c = c$ (always true since $c = 0$)
+* Bottom-right: $d = c + d \implies c = 0$ (matches our first condition)
+* Top-right: $b + d = a + b \implies d = a$
 
 ---
 
 ## Step 4: Describe the General Form of Matrix $B$
 
 From our equations, we found two strict conditions:
-* $c = 0$
-* $d = a$ ($a$ and $d$ must be equal, while $b$ can be any real number)
+1. $c = 0$
+2. $d = a$ ($a$ and $d$ must be equal, while $b$ can be any real number)
 
-Substituting these conditions back into $B$:
+Substituting these conditions back into $B$, we get the general form:
 
 $$
 B = \begin{pmatrix} a & b \\ 0 & a \end{pmatrix}
 $$
 
 **Conclusion:** 
-Any matrix $B$ that commutes with $A = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$ must have identical diagonal entries ($a = d$) and a zero in the bottom-left position ($c = 0$). They can be written in the general form $\begin{pmatrix} a & b \\ 0 & a \end{pmatrix}$ for any numbers $a$ and $b$
+Any matrix $B$ that commutes with $A = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$ must have identical diagonal entries ($a = d$) and a zero in the bottom-left position ($c = 0$). They can be written in the general form $\begin{pmatrix} a & b \\ 0 & a \end{pmatrix}$ for any numbers $a$ and $b$.
