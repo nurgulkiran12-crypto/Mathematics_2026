@@ -1,12 +1,12 @@
 # Exercise 5: Matrix Times Vector
 
-Given matrix $A$:
+Given:
 
 $$
 A = \begin{pmatrix} 2 & -1 \\ 1 & 3 \end{pmatrix}
 $$
 
-And vector $x$:
+and 
 
 $$
 x = \begin{pmatrix} 4 \\ 2 \end{pmatrix}
