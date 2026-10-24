@@ -13,7 +13,15 @@ $$
 Subtract 2 times Row 1 from Row 2:
 
 $$
-\begin{pmatrix} 1 & 2 & -1 \\ 2 - 2(1) & 4 - 2(2) & 1 - 2(-1) \\ -1 & 1 & 3 \end{pmatrix} = \begin{pmatrix} 1 & 2 & -1 \\ 0 & 0 & 3 \\ -1 & 1 & 3 \end{pmatrix}
+\begin{pmatrix} 1 & 2 & -1 \\ 2 - 2(1) & 4 - 2(2) & 1 - 2(-1) \\ -1 & 1 & 3 \end{pmatrix}
+$$
+
+$$
+=
+$$
+
+$$
+\begin{pmatrix} 1 & 2 & -1 \\ 0 & 0 & 3 \\ -1 & 1 & 3 \end{pmatrix}
 $$
 
 * **Reversing operation:** $R_2 \leftarrow R_2 + 2R_1$
@@ -25,7 +33,15 @@ $$
 Add Row 1 to Row 3:
 
 $$
-\begin{pmatrix} 1 & 2 & -1 \\ 0 & 0 & 3 \\ -1 + 1 & 1 + 2 & 3 + (-1) \end{pmatrix} = \begin{pmatrix} 1 & 2 & -1 \\ 0 & 0 & 3 \\ 0 & 3 & 2 \end{pmatrix}
+\begin{pmatrix} 1 & 2 & -1 \\ 0 & 0 & 3 \\ -1 + 1 & 1 + 2 & 3 + (-1) \end{pmatrix}
+$$
+
+$$
+=
+$$
+
+$$
+\begin{pmatrix} 1 & 2 & -1 \\ 0 & 0 & 3 \\ 0 & 3 & 2 \end{pmatrix}
 $$
 
 * **Reversing operation:** $R_3 \leftarrow R_3 - R_1$
