@@ -1,4 +1,4 @@
-# Exercise 6: Transpose and Properties of Transposed Products
+
 
 Given:
 
