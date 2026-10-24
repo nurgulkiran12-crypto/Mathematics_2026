@@ -40,18 +40,9 @@ $$
 
 ---
 
-## Step 3: Comparison and Geometric Explanation
+Comparison:
 
-* **Comparison:** 
-  We obtain:
-  $$
-  RSx = \begin{pmatrix} -2 \\ 2 \end{pmatrix}
-  $$
-  and
-  $$
-  SRx = \begin{pmatrix} -4 \\ 1 \end{pmatrix}
-  $$
-  Comparing these results, we find that $RSx \neq SRx$. Thus, the order of multiplication changes the outcome.
+RSx = (-2, 2) and SRx = (-4, 1). Since RSx is not equal to SRx, the results are different.
 
 * **Geometric Explanation:** 
   Transformation order matters because matrix multiplication is non-commutative. 
