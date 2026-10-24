@@ -1,20 +1,14 @@
-# Exercise 4: Matrix Multiplication and Noncommutativity
+# Exercise 3: When Can Matrices Be Multiplied?
 
-Given:
+Given matrix sizes: $A_{2\times3}$, $B_{3\times4}$, $C_{4\times2}$, $D_{2\times2}$.
 
-$$
-A = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}, \qquad B = \begin{pmatrix} 2 & 0 \\ 3 & 1 \end{pmatrix}
-$$
+## Analysis of Products
 
-## 1. Computing $AB$
-$$
-AB = \begin{pmatrix} (1 \cdot 2 + 2 \cdot 3) & (1 \cdot 0 + 2 \cdot 1) \\ (0 \cdot 2 + 1 \cdot 3) & (0 \cdot 0 + 1 \cdot 1) \end{pmatrix} = \begin{pmatrix} 8 & 2 \\ 3 & 1 \end{pmatrix}
-$$
-
-## 2. Computing $BA$
-$$
-BA = \begin{pmatrix} (2 \cdot 1 + 0 \cdot 0) & (2 \cdot 2 + 0 \cdot 1) \\ (3 \cdot 1 + 1 \cdot 0) & (3 \cdot 2 + 1 \cdot 1) \end{pmatrix} = \begin{pmatrix} 2 & 4 \\ 3 & 7 \end{pmatrix}
-$$
-
-## 3. Conclusion
-Since $AB \neq BA$, matrix multiplication is **non-commutative**. The order of multiplication changes the result.
+* **$AB$ ($2\times3$ and $3\times4$):** Inner dimensions match ($3 = 3$). **Defined**, result size is **$2 \times 4$**.
+* **$BA$ ($3\times4$ and $2\times3$):** Inner dimensions do not match ($4 \neq 2$). **Undefined**.
+* **$BC$ ($3\times4$ and $4\times2$):** Inner dimensions match ($4 = 4$). **Defined**, result size is **$3 \times 2$**.
+* **$CB$ ($4\times2$ and $3\times4$):** Inner dimensions do not match ($2 \neq 3$). **Undefined**.
+* **$AC$ ($2\times3$ and $4\times2$):** Inner dimensions do not match ($3 \neq 4$). **Undefined**.
+* **$CA$ ($4\times2$ and $2\times3$):** Inner dimensions match ($2 = 2$). **Defined**, result size is **$4 \times 3$**.
+* **$AD$ ($2\times3$ and $2\times2$):** Inner dimensions do not match ($3 \neq 2$). **Undefined**.
+* **$DA$ ($2\times2$ and $2\times3$):** Inner dimensions match ($2 = 2$). **Defined**, result size is **$2 \times 3$**.
