@@ -1,39 +1,19 @@
-# Exercise 10: Columns of a Matrix Product
+Exercise 10: Columns of a Matrix Product
 
 Given:
-$$
-A = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix}, \qquad B = \begin{pmatrix} 1 & 2 \\ -1 & 0 \\ 3 & 1 \end{pmatrix}
-$$
-Columns of $B$: $b_1 = \begin{pmatrix} 1 \\ -1 \\ 3 \end{pmatrix}$, $b_2 = \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix}$.
+A = [1 2 0; 0 1 1]
+B = [1 2; -1 0; 3 1]
 
----
+Denote the columns of B by b1 and b2:
+b1 = [1, -1, 3]^T
+b2 = [2, 0, 1]^T
 
-## 1. Computing $Ab_1$ and $Ab_2$
+Computing Ab1 and Ab2:
+Ab1 = A * b1 = [1(1) + 2(-1) + 0(3); 0(1) + 1(-1) + 1(3)] = [-1, 2]^T
+Ab2 = A * b2 = [1(2) + 2(0) + 0(1); 0(2) + 1(0) + 1(1)] = [2, 1]^T
 
-* **$Ab_1$:**
-  $$
-  Ab_1 = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix} \begin{pmatrix} 1 \\ -1 \\ 3 \end{pmatrix} = \begin{pmatrix} -1 \\ 2 \end{pmatrix}
-  $$
+Computing the matrix AB:
+AB = A * B = [-1 2; 2 1]
 
-* **$Ab_2$:**
-  $$
-  Ab_2 = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix} \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 2 \\ 1 \end{pmatrix}
-  $$
-
----
-
-## 2. Computing $AB$
-
-$$
-AB = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix} \begin{pmatrix} 1 & 2 \\ -1 & 0 \\ 3 & 1 \end{pmatrix} = \begin{pmatrix} -1 & 2 \\ 2 & 1 \end{pmatrix}
-$$
-
----
-
-## 3. Comparison and Explanation
-
-* **Comparison:** 
-  The columns of $AB$ are $\begin{pmatrix} -1 \\ 2 \end{pmatrix}$ and $\begin{pmatrix} 2 \\ 1 \end{pmatrix}$, which are identical to $Ab_1$ and $Ab_2$.
-
-* **Explanation:** 
-  By definition, the columns of a product matrix $AB$ are formed by multiplying $A$ by each column of $B$ ($AB = \begin{pmatrix} Ab_1 & Ab_2 \end{pmatrix}$).
+Comparison and Explanation:
+The columns of AB are [-1, 2]^T and [2, 1]^T, which are precisely the vectors Ab1 and Ab2. By definition, multiplying matrix A by matrix B results in a matrix whose columns are formed by multiplying A by each individual column of B (AB = [Ab1 Ab2]).
