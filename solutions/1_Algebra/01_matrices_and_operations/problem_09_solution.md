@@ -52,3 +52,8 @@ $$
   Transformation order matters because matrix multiplication is non-commutative. 
   * In $RSx$, vector $x$ is stretched horizontally first, and then rotated by $90^\circ$ counterclockwise. 
   * In $SRx$, the vector is rotated by $90^\circ$ counterclockwise first, and then the stretching is applied to the already rotated coordinates.
+
+* **Geometric Explanation:** 
+  Transformation order matters because matrix multiplication is non-commutative. 
+  * In $RSx$, vector $x$ is stretched horizontally first, and then rotated by $90^\circ$ counterclockwise. 
+  * In $SRx$, the vector is rotated by $90^\circ$ counterclockwise first, and then the stretching is applied to the already rotated coordinates.
