@@ -42,11 +42,11 @@ $$
 
 ## Step 3: Comparison and Geometric Explanation
 
-* **Comparison:** 
+**Comparison:** 
   $$
   RSx = \begin{pmatrix} -2 \\ 2 \end{pmatrix} \quad \text{and} \quad SRx = \begin{pmatrix} -4 \\ 1 \end{pmatrix}
   $$
-  Since $RSx \neq SRx$, the order of transformations yields different results.
+  Since $RSx \neq SRx$, the two resulting vectors are different.
 
 * **Geometric Explanation:** 
   Transformation order matters because matrix multiplication is non-commutative. 
