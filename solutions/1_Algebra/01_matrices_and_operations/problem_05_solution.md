@@ -1,27 +1,55 @@
-# Method 1: Standard Row-Column Multiplication for $Ax$
+# Exercise 5: Matrix Times Vector
 
-Given:
-
-$$
-A = \begin{pmatrix} 2 & -1 \\ 1 & 3 \end{pmatrix}, \qquad x = \begin{pmatrix} 4 \\ 2 \end{pmatrix}
-$$
-
-To compute the matrix-vector product $Ax$ using the standard row-by-column method, we multiply the entries of each row of $A$ by the corresponding entries of vector $x$ and sum them up.
-
-**Top entry (Row 1 of $A$ multiplied by $x$):**
+Given matrix $A$:
 
 $$
-(2 \cdot 4) + (-1 \cdot 2) = 8 - 2 = 6
+A = \begin{pmatrix} 2 & -1 \\ 1 & 3 \end{pmatrix}
 $$
 
-**Bottom entry (Row 2 of $A$ multiplied by $x$):**
+And vector $x$:
 
 $$
-(1 \cdot 4) + (3 \cdot 2) = 4 + 6 = 10
+x = \begin{pmatrix} 4 \\ 2 \end{pmatrix}
 $$
 
-Putting the entries together into the resulting vector:
+---
+
+## Step 1: Computing $Ax$
+
+To compute the matrix-vector product $Ax$ using the standard row-by-column method:
 
 $$
-Ax = \begin{pmatrix} 6 \\ 10 \end{pmatrix}
+Ax = \begin{pmatrix} 2 & -1 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} 4 \\ 2 \end{pmatrix}
+$$
+
+Calculating the entries row by row:
+
+$$
+Ax = \begin{pmatrix} (2 \cdot 4) + (-1 \cdot 2) \\ (1 \cdot 4) + (3 \cdot 2) \end{pmatrix}
+$$
+
+$$
+Ax = \begin{pmatrix} 8 - 2 \\ 4 + 6 \end{pmatrix} = \begin{pmatrix} 6 \\ 10 \end{pmatrix}
+$$
+
+---
+
+## Step 2: Linear Combination of the Columns of $A$
+
+Expressing $Ax$ as a linear combination of the columns of $A$ using the entries of $x$ as coefficients:
+
+$$
+Ax = 4 \begin{pmatrix} 2 \\ 1 \end{pmatrix} + 2 \begin{pmatrix} -1 \\ 3 \end{pmatrix}
+$$
+
+Evaluating the scalar multiplications:
+
+$$
+Ax = \begin{pmatrix} 8 \\ 4 \end{pmatrix} + \begin{pmatrix} -2 \\ 6 \end{pmatrix}
+$$
+
+Adding the vectors together:
+
+$$
+Ax = \begin{pmatrix} 8 - 2 \\ 4 + 6 \end{pmatrix} = \begin{pmatrix} 6 \\ 10 \end{pmatrix}
 $$
