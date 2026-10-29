@@ -1,25 +1,30 @@
 ## Question
 
-Exercise 1. Determinant of a 2×2 Matrix
-Compute:
-$\det([3\ -2;\ 5\ 4])$ and $\det([1\ 7;\ 2\ 14])$.
-Which matrix is invertible? Justify your answer.
-*(Why this exercise: introduces the simplest determinant calculation and immediately connects it with invertibility.)*
+Exercise 2. Determinant of a 3×3 Matrix
+For:
+A = [1 2 -1; 0 3 4; 2 1 5]
+compute det(A) using Sarrus' rule. Then perform one simple check using a chosen property of the determinant.
 
 ## Solution
 
-1. **Computing the Determinant of the First Matrix ($A = [3\ -2;\ 5\ 4]$):**
-* For a 2 × 2 matrix $[a\ b;\ c\ d]$, the determinant is given by $ad - bc$.
-* Applying the formula:
-$\det(A) = (3 \times 4) - (-2 \times 5) = 12 - (-10) = 12 + 10 = 22$.
+1. **Computing det(A) Using Sarrus' Rule:**
+* Append the first two columns to the right of the matrix for the diagonal products:
+[1  2 -1 | 1  2]
+[0  3  4 | 0  3]
+[2  1  5 | 2  1]
+* Sum of the products of the main diagonals (going down-right):
+$(1 \times 3 \times 5) + (2 \times 4 \times 2) + (-1 \times 0 \times 1) = 15 + 16 + 0 = 31$
+* Sum of the products of the secondary diagonals (going up-right):
+$(2 \times 3 \times -1) + (1 \times 4 \times 1) + (5 \times 0 \times 2) = -6 + 4 + 0 = -2$
+* Subtract the secondary sum from the main sum:
+$\det(A) = 31 - (-2) = 31 + 2 = 33$.
 
 
-2. **Computing the Determinant of the Second Matrix ($B = [1\ 7;\ 2\ 14]$):**
-* Applying the determinant formula:
-$\det(B) = (1 \times 14) - (7 \times 2) = 14 - 14 = 0$.
-
-
-3. **Determining Which Matrix Is Invertible and Why:**
-* A square matrix is **invertible** if and only if its determinant is non-zero ($\det \neq 0$).
-* **Matrix A** has a determinant of $22$ (which is $\neq 0$), meaning it **is invertible**.
-* **Matrix B** has a determinant of $0$, meaning it **is not invertible** (it is singular). Geometrically, this means the columns of matrix B are linearly dependent (the second column is 7 times the first column), so the transformation collapses 2D space onto a line and cannot be reversed.
+2. **Performing a Check Using Cofactor Expansion:**
+* **Method:** We can verify our result using cofactor expansion along the first column (which contains a convenient zero) to ensure consistency.
+* **Calculation:**
+$\det(A) = 1 \times \det([3\ 4;\ 1\ 5]) - 0 \times \det([2\ -1;\ 1\ 5]) + 2 \times \det([2\ -1;\ 3\ 4])$
+$\det(A) = 1 \times ((3 \times 5) - (4 \times 1)) - 0 + 2 \times ((2 \times 4) - (-1 \times 3))$
+$\det(A) = 1 \times (15 - 4) + 2 \times (8 - (-3))$
+$\det(A) = 1 \times 11 + 2 \times 11 = 11 + 22 = 33$.
+* **Conclusion:** Both methods yield **33**, confirming that our determinant calculation is correct.
