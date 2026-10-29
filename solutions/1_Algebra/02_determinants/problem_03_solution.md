@@ -1,3 +1,7 @@
+Haklısın, sanırım `\det`, `\times` gibi LaTeX komutları da Copilot'un okuma ortamında bozulmaya yol açtı. Hiçbir ters bölü (`\`) veya LaTeX komutu kullanmadan, tamamen **saf düz metin (plain text)** formatıyla Exercise 3'ü yeniden düzenledim:
+
+---
+
 ## Question
 
 Exercise 3. Swapping Two Rows
@@ -10,28 +14,28 @@ First predict det(B) using a determinant property, and then verify your predicti
 ## Solution
 
 1. **Computing det(A):**
-* Using cofactor expansion along the first column of $A = [1\ 2\ 0;\ 0\ 3\ 1;\ 2\ 1\ 1]$:
-$\det(A) = 1 \times \det([3\ 1;\ 1\ 1]) - 0 \times \det([2\ 0;\ 1\ 1]) + 2 \times \det([2\ 0;\ 3\ 1])$
+* Using cofactor expansion along the first column of A = [1 2 0; 0 3 1; 2 1 1]:
+det(A) = 1 * det([3 1; 1 1]) - 0 * det([2 0; 1 1]) + 2 * det([2 0; 3 1])
 * Evaluating the 2 × 2 determinants:
-$\det(A) = 1 \times ((3 \times 1) - (1 \times 1)) + 2 \times ((2 \times 1) - (0 \times 3))$
-$\det(A) = 1 \times (3 - 1) + 2 \times (2 - 0) = 1(2) + 2(2) = 2 + 4 = 6$.
+det(A) = 1 * ((3 * 1) - (1 * 1)) + 2 * ((2 * 1) - (0 * 3))
+det(A) = 1 * (3 - 1) + 2 * (2 - 0) = 1(2) + 2(2) = 2 + 4 = 6.
 
 
 2. **Forming Matrix B by Swapping Rows:**
-* Swapping the first row ($[1\ 2\ 0]$) and the second row ($[0\ 3\ 1]$) yields:
+* Swapping the first row ([1 2 0]) and the second row ([0 3 1]) yields:
 B = [0 3 1; 1 2 0; 2 1 1]
 
 
 3. **Predicting det(B) Using Determinant Properties:**
-* **Property:** If two rows of a square matrix are swapped, the determinant of the new matrix is the exact negative of the original matrix's determinant ($\det(B) = -\det(A)$).
-* **Prediction:** Since $\det(A) = 6$, we predict that **$\det(B) = -6$**.
+* **Property:** If two rows of a square matrix are swapped, the determinant of the new matrix is the exact negative of the original matrix's determinant (det(B) = -det(A)).
+* **Prediction:** Since det(A) = 6, we predict that **det(B) = -6**.
 
 
 4. **Verifying the Prediction by Calculation:**
-* Computing $\det(B)$ using cofactor expansion along the first row of $B$:
-$\det(B) = 0 \times \det([2\ 0;\ 1\ 1]) - 3 \times \det([1\ 0;\ 2\ 1]) + 1 \times \det([1\ 2;\ 2\ 1])$
+* Computing det(B) using cofactor expansion along the first row of B:
+det(B) = 0 * det([2 0; 1 1]) - 3 * det([1 0; 2 1]) + 1 * det([1 2; 2 1])
 * Evaluating:
-$\det(B) = 0 - 3 \times ((1 \times 1) - (0 \times 2)) + 1 \times ((1 \times 1) - (2 \times 2))$
-$\det(B) = -3 \times (1 - 0) + 1 \times (1 - 4)$
-$\det(B) = -3(1) + 1(-3) = -3 - 3 = -6$.
-* **Conclusion:** The calculated determinant matches our prediction ($\det(B) = -6$), confirming the row-swap property.
+det(B) = 0 - 3 * ((1 * 1) - (0 * 2)) + 1 * ((1 * 1) - (2 * 2))
+det(B) = -3 * (1 - 0) + 1 * (1 - 4)
+det(B) = -3(1) + 1(-3) = -3 - 3 = -6.
+* **Conclusion:** The calculated determinant matches our prediction (det(B) = -6), confirming the row-swap property.
