@@ -1,76 +1,53 @@
-# Exercise 15: Associativity of Multiplication and Calculation Paths
+## Question
 
-Let's verify matrix associativity by comparing two different grouping paths for matrix multiplication!
-
----
-
+Exercise 15. Associativity of Multiplication and Different Calculation Paths
 Given:
+A = [1 2 0; 0 1 1], B = [1 0; 2 1; -1 3], C = [2 1; 0 -1]
+Compute (AB)C and A(BC). Compare the results and the number of intermediate operations ((AB)C uses 12 + 8 = 20 scalar multiplications, while A(BC) uses 12 + 12 = 24). Explain what associativity of matrix multiplication means in this example.
 
-$$
-A = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix}, \qquad B = \begin{pmatrix} 1 & 0 \\ 2 & 1 \\ -1 & 3 \end{pmatrix}, \qquad C = \begin{pmatrix} 2 & 1 \\ 0 & -1 \end{pmatrix}
-$$
+## Solution
 
----
+1. **Computing (AB)C:**
+* **Step 1: Compute AB**
+Matrix $A$ is $2 \times 3$ and matrix $B$ is $3 \times 2$, so their product $AB$ is a $2 \times 2$ matrix:
+$AB = [1 2 0; 0 1 1] \times [1 0; 2 1; -1 3]$
+$AB = [(1 \times 1 + 2 \times 2 + 0 \times (-1)), (1 \times 0 + 2 \times 1 + 0 \times 3); (0 \times 1 + 1 \times 2 + 1 \times (-1)), (0 \times 0 + 1 \times 1 + 1 \times 3)]$
+$AB = [1 + 4 + 0, 0 + 2 + 0; 0 + 2 - 1, 0 + 1 + 3] = [5 2; 1 4]$
+*(Note: This calculation requires $2 \times 2 \times 3 = 12$ scalar multiplications).*
+* **Step 2: Compute (AB)C**
+Multiplying the $2 \times 2$ matrix $AB$ by the $2 \times 2$ matrix $C$:
+$(AB)C = [5 2; 1 4] \times [2 1; 0 -1]$
+$(AB)C = [(5 \times 2 + 2 \times 0), (5 \times 1 + 2 \times (-1)); (1 \times 2 + 4 \times 0), (1 \times 1 + 4 \times (-1))]$
+$(AB)C = [10 + 0, 5 - 2; 2 + 0, 1 - 4] = [10 3; 2 -3]$
+*(Note: This step requires $2 \times 2 \times 2 = 8$ scalar multiplications).*
+* **Total scalar multiplications for (AB)C:** $12 + 8 = 20$.
 
-## Step 1: Computing $(AB)C$
 
-**1. Compute $AB$ first:**
 
-$$
-AB = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 2 & 1 \\ -1 & 3 \end{pmatrix}
-$$
 
-$$
-AB = \begin{pmatrix} (1 \cdot 1 + 2 \cdot 2 + 0 \cdot -1) & (1 \cdot 0 + 2 \cdot 1 + 0 \cdot 3) \\ (0 \cdot 1 + 1 \cdot 2 + 1 \cdot -1) & (0 \cdot 0 + 1 \cdot 1 + 1 \cdot 3) \end{pmatrix} = \begin{pmatrix} 5 & 2 \\ 1 & 4 \end{pmatrix}
-$$
+2. **Computing A(BC):**
+* **Step 1: Compute BC**
+Matrix $B$ is $3 \times 2$ and matrix $C$ is $2 \times 2$, so their product $BC$ is a $3 \times 2$ matrix:
+$BC = [1 0; 2 1; -1 3] \times [2 1; 0 -1]$
+$BC = [(1 \times 2 + 0 \times 0), (1 \times 1 + 0 \times (-1)); (2 \times 2 + 1 \times 0), (2 \times 1 + 1 \times (-1)); (-1 \times 2 + 3 \times 0), (-1 \times 1 + 3 \times (-1))]$
+$BC = [2 + 0, 1 + 0; 4 + 0, 2 - 1; -2 + 0, -1 - 3] = [2 1; 4 1; -2 -4]$
+*(Note: This calculation requires $3 \times 2 \times 2 = 12$ scalar multiplications).*
+* **Step 2: Compute A(BC)**
+Multiplying the $2 \times 3$ matrix $A$ by the $3 \times 2$ matrix $BC$:
+$A(BC) = [1 2 0; 0 1 1] \times [2 1; 4 1; -2 -4]$
+$A(BC) = [(1 \times 2 + 2 \times 4 + 0 \times (-2)), (1 \times 1 + 2 \times 1 + 0 \times (-4)); (0 \times 2 + 1 \times 4 + 1 \times (-2)), (0 \times 1 + 1 \times 1 + 1 \times (-4))]$
+$A(BC) = [2 + 8 + 0, 1 + 2 + 0; 0 + 4 - 2, 0 + 1 - 4] = [10 3; 2 -3]$
+*(Note: This step requires $2 \times 2 \times 3 = 12$ scalar multiplications).*
+* **Total scalar multiplications for A(BC):** $12 + 12 = 24$.
 
-**2. Multiply by $C$ to find $(AB)C$:**
 
-$$
-(AB)C = \begin{pmatrix} 5 & 2 \\ 1 & 4 \end{pmatrix} \begin{pmatrix} 2 & 1 \\ 0 & -1 \end{pmatrix}
-$$
 
-$$
-(AB)C = \begin{pmatrix} (5 \cdot 2 + 2 \cdot 0) & (5 \cdot 1 + 2 \cdot -1) \\ (1 \cdot 2 + 4 \cdot 0) & (1 \cdot 1 + 4 \cdot -1) \end{pmatrix} = \begin{pmatrix} 10 & 3 \\ 2 & -3 \end{pmatrix}
-$$
 
----
+3. **Comparison of Results and Computational Cost:**
+* Both calculation paths yield the exact same resulting matrix: $(AB)C = A(BC) = [10 3; 2 -3]$.
+* However, they differ in computational efficiency: grouping as $(AB)C$ requires **20 scalar multiplications**, whereas grouping as $A(BC)$ requires **24 scalar multiplications**.
 
-## Step 2: Computing $A(BC)$
 
-**1. Compute $BC$ first:**
-
-$$
-BC = \begin{pmatrix} 1 & 0 \\ 2 & 1 \\ -1 & 3 \end{pmatrix} \begin{pmatrix} 2 & 1 \\ 0 & -1 \end{pmatrix}
-$$
-$$
-BC = \begin{pmatrix} (1 \cdot 2 + 0 \cdot 0) & (1 \cdot 1 + 0 \cdot -1) \\ (2 \cdot 2 + 1 \cdot 0) & (2 \cdot 1 + 1 \cdot -1) \\ (-1 \cdot 2 + 3 \cdot 0) & (-1 \cdot 1 + 3 \cdot -1) \end{pmatrix} = \begin{pmatrix} 2 & 1 \\ 4 & 1 \\ -2 & -4 \end{pmatrix}
-$$
-
-**2. Multiply by $A$ to find $A(BC)$:**
-
-$$
-A(BC) = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix} \begin{pmatrix} 2 & 1 \\ 4 & 1 \\ -2 & -4 \end{pmatrix}
-$$
-
-$$
-A(BC) = \begin{pmatrix} (1 \cdot 2 + 2 \cdot 4 + 0 \cdot -2) & (1 \cdot 1 + 2 \cdot 1 + 0 \cdot -4) \\ (0 \cdot 2 + 1 \cdot 4 + 1 \cdot -2) & (0 \cdot 1 + 1 \cdot 1 + 1 \cdot -4) \end{pmatrix}
-$$
-
-$$
-A(BC) = \begin{pmatrix} 2 + 8 + 0 & 1 + 2 + 0 \\ 0 + 4 - 2 & 0 + 1 - 4 \end{pmatrix} = \begin{pmatrix} 10 & 3 \\ 2 & -3 \end{pmatrix}
-$$
-
----
-
-## Step 3: Comparison and Associativity Explanation
-
-Comparing our results:
-
-$$
-(AB)C = \begin{pmatrix} 10 & 3 \\ 2 & -3 \end{pmatrix} \quad \text{and} \quad A(BC) = \begin{pmatrix} 10 & 3 \\ 2 & -3 \end{pmatrix}
-$$
-
-* **Results:** Both calculation paths yield the exact same matrix, verifying that **$(AB)C = A(BC)$**.
-* **Intermediate Operations:** Path 1 computes a $2 \times 3$ by $3 \times 2$ product followed by a $2 \times 2$ product. Path 2 computes a $3 \times 2$ by $2 \times 2$ product followed by a $2 \times 3$ by $3 \times 2$ product. 
-* **Meaning of Associativity:** Matrix multiplication is **associative**, meaning the grouping parentheses do not affect the final outcome. This property allows us to write products like $ABC$ unambiguously without parentheses and is vital for optimizing computational efficiency in computer graphics, machine learning, and linear algebra solvers.
+4. **Explanation of Associativity:**
+* **Associativity** means that when multiplying three or more matrices together, the grouping (or order of pairwise multiplications) does not affect the final resulting product.
+* While the final matrix is identical regardless of how parentheses are placed, the choice of grouping can significantly change the number of arithmetic operations required. In computer science and applied linear algebra, optimizing the order of matrix multiplications (matrix chain multiplication) is crucial for saving computational resources.
