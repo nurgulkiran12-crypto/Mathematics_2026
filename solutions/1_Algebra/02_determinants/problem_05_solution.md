@@ -1,4 +1,5 @@
-QuestionExercise 5. Row Operations
+Question
+Exercise 5. Row Operations
 For the matrix:
 A = [1 2 3; 2 1 0; -1 4 2]
 find det(A) by simplifying the matrix with row operations. At each step, indicate whether and how the determinant changes.SolutionStep-by-step Row Operations:Operation 1: Eliminate the first entry of row 
