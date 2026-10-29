@@ -1,7 +1,4 @@
 
-
-Bunu doğrudan kopyalayıp yapıştırabilirsin:
-
 ---
 
 ## Question
