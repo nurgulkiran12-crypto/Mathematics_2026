@@ -1,7 +1,3 @@
-Haklısın, yine `\begin{pmatrix}` veya benzeri LaTeX matris ortamları yüzünden Copilot okuyamamıştır. Hemen matrisleri **saf köşeli parantez formatına (`[ ... ]`)** çevirerek düzelttim.
-
-Bunu doğrudan kopyalayıp yapıştırabilirsin:
-
 ---
 
 ## Question
