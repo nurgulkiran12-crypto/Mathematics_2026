@@ -1,65 +1,26 @@
-# Exercise 2: Addition, Scalar Multiplication, and Compatibility
+Question
+Exercise 2. Addition and Scalar Multiplication
+For:
+A = [1 2; -1 3] and B = [4 -2; 0 5]
+compute:
+A + B, A - B, 3A - 2B.
+Explain why matrix addition is possible only for matrices of the same size.
 
-Let's break down how to add, subtract, and scale matrices step-by-step!
+Solution
+Computing A + B:
+A + B = [1 + 4, 2 + (-2); -1 + 0, 3 + 5] = [5 0; -1 8]
 
----
+Computing A - B:
+A - B = [1 - 4, 2 - (-2); -1 - 0, 3 - 5] = [-3 4; -1 -2]
 
-Given:
+Computing 3A - 2B:
 
-$$
-A = \begin{pmatrix} 1 & 2 \\ -1 & 3 \end{pmatrix}, \qquad B = \begin{pmatrix} 4 & -2 \\ 0 & 5 \end{pmatrix}
-$$
+First, scalar multiplication:
+3A = [3 × 1, 3 × 2; 3 × (-1), 3 × 3] = [3 6; -3 9]
+2B = [2 × 4, 2 × (-2); 2 × 0, 2 × 5] = [8 -4; 0 10]
 
----
+Then, subtract the resulting matrices:
+3A - 2B = [3 - 8, 6 - (-4); -3 - 0, 9 - 10] = [-5 10; -3 -1]
 
-## Step 1: Matrix Addition ($A + B$)
-
-To add two matrices, we add their corresponding entries element-by-element:
-
-$$
-A + B = \begin{pmatrix} 1 & 2 \\ -1 & 3 \end{pmatrix} + \begin{pmatrix} 4 & -2 \\ 0 & 5 \end{pmatrix}
-$$
-
-$$
-A + B = \begin{pmatrix} 1 + 4 & 2 + (-2) \\ -1 + 0 & 3 + 5 \end{pmatrix} = \begin{pmatrix} 5 & 0 \\ -1 & 8 \end{pmatrix}
-$$
-
----
-
-## Step 2: Matrix Subtraction ($A - B$)
-
-To subtract two matrices, we subtract the corresponding entries element-by-element:
-
-$$
-A - B = \begin{pmatrix} 1 & 2 \\ -1 & 3 \end{pmatrix} - \begin{pmatrix} 4 & -2 \\ 0 & 5 \end{pmatrix}
-$$
-
-$$
-A - B = \begin{pmatrix} 1 - 4 & 2 - (-2) \\ -1 - 0 & 3 - 5 \end{pmatrix} = \begin{pmatrix} -3 & 4 \\ -1 & -2 \end{pmatrix}
-$$
-
----
-
-## Step 3: Scalar Multiplication ($3A - 2B$)
-
-First, multiply each matrix by its scalar factor:
-
-$$
-3A = 3 \begin{pmatrix} 1 & 2 \\ -1 & 3 \end{pmatrix} = \begin{pmatrix} 3 & 6 \\ -3 & 9 \end{pmatrix}
-$$
-
-$$
-2B = 2 \begin{pmatrix} 4 & -2 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 8 & -4 \\ 0 & 10 \end{pmatrix}
-$$
-
-Now, subtract the resulting matrices:
-
-$$
-3A - 2B = \begin{pmatrix} 3 & 6 \\ -3 & 9 \end{pmatrix} - \begin{pmatrix} 8 & -4 \\ 0 & 10 \end{pmatrix} = \begin{pmatrix} 3 - 8 & 6 - (-4) \\ -3 - 0 & 9 - 10 \end{pmatrix} = \begin{pmatrix} -5 & 10 \\ -3 & -1 \end{pmatrix}
-$$
-
----
-
-## Step 4: Why Matrix Addition Requires the Same Size
-
-Matrix addition and subtraction are performed strictly **entry-by-entry**. Every single number in the first matrix must pair up with a corresponding position in the second matrix. If the dimensions (sizes) do not match, some entries will lack a pairing partner, making addition or subtraction undefined.
+Explanation of the Size Requirement:
+Matrix addition and subtraction are performed element-by-element (entrywise). Therefore, both matrices must have the exact same dimensions (same number of rows and columns) so that every element in matrix A has a corresponding matching element in matrix B to add or subtract with. If their sizes differed, some entries would not have a partner.
