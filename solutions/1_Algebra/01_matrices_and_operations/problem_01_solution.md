@@ -1,47 +1,35 @@
-# Exercise 1: Matrix Size and Entries
+Question 
 
-Let's review the basics of matrix notation, dimensions, and indexing step by step!
-
----
-
+Exercise 1. Matrix Size and Entries
 Given:
+A = [2 -1 3; 0 4 5]
+B = [1 0; -2 3; 4 1]
 
-$$
-A = \begin{pmatrix} 2 & -1 & 3 \\ 0 & 4 & 5 \end{pmatrix}, \qquad B = \begin{pmatrix} 1 & 0 \\ -2 & 3 \\ 4 & 1 \end{pmatrix}
-$$
+State the sizes of matrices A and B.
 
----
+Read off the entries a12, a23, b21, and b32.
 
-## Step 1: Sizes of Matrices $A$ and $B$
+Write the second row of A and the first column of B as vectors.
 
-When stating the size of a matrix, we always use the format **Rows $\times$ Columns** (horizontal $\times$ vertical):
+Solution
+Sizes of Matrices A and B:
 
-* **For matrix $A$:** It has $2$ rows and $3$ columns. Therefore, its size is **$2 \times 3$**.
-* **For matrix $B$:** It has $3$ rows and $2$ columns. Therefore, its size is **$3 \times 2$**.
+Matrix A has 2 rows and 3 columns, so its size is 2 × 3.
 
----
+Matrix B has 3 rows and 2 columns, so its size is 3 × 2.
 
-## Step 2: Reading Specific Entries
+Reading off the Specified Entries:
 
-An entry index $a_{ij}$ represents the element located at row $i$ and column $j$:
+a12 (row 1, column 2 of A) = -1
 
-* **$a_{12}$:** The element in the **1st row** and **2nd column** of matrix $A$, which is **$-1$**.
-* **$a_{23}$:** The element in the **2nd row** and **3rd column** of matrix $A$, which is **$5$**.
-* **$b_{21}$:** The element in the **2nd row** and **1st column** of matrix $B$, which is **$-2$**.
-* **$b_{32}$:** The element in the **3rd row** and **2nd column** of matrix $B$, which is **$1$**.
+a23 (row 2, column 3 of A) = 5
 
----
+b21 (row 2, column 1 of B) = -2
 
-## Step 3: Rows and Columns as Vectors
+b32 (row 3, column 2 of B) = 1
 
-* **The second row of $A$:**
+Writing the Vectors:
 
-$$
-\begin{pmatrix} 0 & 4 & 5 \end{pmatrix}
-$$
+The second row of A as a vector: [0 4 5]
 
-* **The first column of $B$:**
-
-$$
-\begin{pmatrix} 1 \\ -2 \\ 4 \end{pmatrix}
-$$
+The first column of B as a vector: [1; -2; 4]
