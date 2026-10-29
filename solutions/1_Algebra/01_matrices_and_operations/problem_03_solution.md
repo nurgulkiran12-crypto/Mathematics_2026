@@ -1,14 +1,7 @@
-# Exercise 3: When Can Matrices Be Multiplied?
-
-Given matrix sizes: $A_{2\times3}$, $B_{3\times4}$, $C_{4\times2}$, $D_{2\times2}$.
-
-## Analysis of Products
-
-* **$AB$ ($2\times3$ and $3\times4$):** Inner dimensions match ($3 = 3$). **Defined**, result size is **$2 \times 4$**.
-* **$BA$ ($3\times4$ and $2\times3$):** Inner dimensions do not match ($4 \neq 2$). **Undefined**.
-* **$BC$ ($3\times4$ and $4\times2$):** Inner dimensions match ($4 = 4$). **Defined**, result size is **$3 \times 2$**.
-* **$CB$ ($4\times2$ and $3\times4$):** Inner dimensions do not match ($2 \neq 3$). **Undefined**.
-* **$AC$ ($2\times3$ and $4\times2$):** Inner dimensions do not match ($3 \neq 4$). **Undefined**.
-* **$CA$ ($4\times2$ and $2\times3$):** Inner dimensions match ($2 = 2$). **Defined**, result size is **$4 \times 3$**.
-* **$AD$ ($2\times3$ and $2\times2$):** Inner dimensions do not match ($3 \neq 2$). **Undefined**.
-* **$DA$ ($2\times2$ and $2\times3$):** Inner dimensions match ($2 = 2$). **Defined**, result size is **$2 \times 3$**.
+QuestionExercise 3. When Can Matrices Be Multiplied?
+The matrix sizes are:
+A is 2 × 3, B is 3 × 4, C is 4 × 2, D is 2 × 2.
+For the products:
+AB, BA, BC, CB, AC, CA, AD, DA
+determine whether they are defined. If so, state the size of the result. Justify each decision using the dimension compatibility condition.SolutionDimension Compatibility Rule:
+For a product $XY$ to be defined, the number of columns of matrix $X$ must equal the number of rows of matrix $Y$. If $X$ is of size $m \times n$ and $Y$ is of size $n \times p$, the product $XY$ is defined and results in a matrix of size $m \times p$.Applying this rule to each product:AB:Sizes: A (2 × 3) and B (3 × 4)Compatibility: Columns of A (3) = Rows of B (3) $\rightarrow$ DefinedResult size: 2 × 4BA:Sizes: B (3 × 4) and A (2 × 3)Compatibility: Columns of B (4) $\neq$ Rows of A (2) $\rightarrow$ Not definedBC:Sizes: B (3 × 4) and C (4 × 2)Compatibility: Columns of B (4) = Rows of C (4) $\rightarrow$ DefinedResult size: 3 × 2CB:Sizes: C (4 × 2) and B (3 × 4)Compatibility: Columns of C (2) $\neq$ Rows of B (3) $\rightarrow$ Not definedAC:Sizes: A (2 × 3) and C (4 × 2)Compatibility: Columns of A (3) $\neq$ Rows of C (4) $\rightarrow$ Not definedCA:Sizes: C (4 × 2) and A (2 × 3)Compatibility: Columns of C (2) = Rows of A (2) $\rightarrow$ DefinedResult size: 4 × 3AD:Sizes: A (2 × 3) and D (2 × 2)Compatibility: Columns of A (3) $\neq$ Rows of D (2) $\rightarrow$ Not definedDA:Sizes: D (2 × 2) and A (2 × 3)Compatibility: Columns of D (2) = Rows of A (2) $\rightarrow$ DefinedResult size: 2 × 3
