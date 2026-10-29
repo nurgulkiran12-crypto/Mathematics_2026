@@ -1,55 +1,31 @@
-# Exercise 9: Composing Transformations
+## Question
 
-Given:
+Exercise 9. Composing Transformations
+Let:
+S = [2 0; 0 1], R = [0 -1; 1 0]
+The matrix S describes nonuniform scaling, while R describes a 90° counterclockwise rotation. For:
+x = [1; 2]
+compute RSx and SRx. Compare the results and explain geometrically why the order of these transformations matters.
 
-$$
-S = \begin{pmatrix} 2 & 0 \\ 0 & 1 \end{pmatrix}, \qquad R = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}, \qquad x = \begin{pmatrix} 1 \\ 2 \end{pmatrix}
-$$
+## Solution
 
----
+1. **Computing RSx:**
+* First, apply the scaling matrix $S$ to vector $x$:
+Sx = [2 0; 0 1] * [1; 2] = [(2 × 1) + (0 × 2); (0 × 1) + (1 × 2)] = [2; 2]
+* Next, apply the rotation matrix $R$ to the resulting vector:
+RSx = [0 -1; 1 0] * [2; 2] = [(0 × 2) + (-1 × 2); (1 × 2) + (0 × 2)] = [-2; 2]
 
-## Step 1: Computing $RSx$ (Scaling First, Then Rotation)
 
-First, apply the scaling matrix $S$ to vector $x$:
+2. **Computing SRx:**
+* First, apply the rotation matrix $R$ to vector $x$:
+Rx = [0 -1; 1 0] * [1; 2] = [(0 × 1) + (-1 × 2); (1 × 1) + (0 × 2)] = [-2; 1]
+* Next, apply the scaling matrix $S$ to the resulting vector:
+SRx = [2 0; 0 1] * [-2; 1] = [(2 × -2) + (0 × 1); (0 × -2) + (1 × 1)] = [-4; 1]
 
-$$
-Sx = \begin{pmatrix} 2 & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 \\ 2 \end{pmatrix} = \begin{pmatrix} 2(1) + 0(2) \\ 0(1) + 1(2) \end{pmatrix} = \begin{pmatrix} 2 \\ 2 \end{pmatrix}
-$$
 
-Next, apply the rotation matrix $R$ to the resulting vector:
-
-$$
-RSx = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 2 \\ 2 \end{pmatrix} = \begin{pmatrix} 0(2) + (-1)(2) \\ 1(2) + 0(2) \end{pmatrix} = \begin{pmatrix} -2 \\ 2 \end{pmatrix}
-$$
-
----
-
-## Step 2: Computing $SRx$ (Rotation First, Then Scaling)
-
-First, apply the rotation matrix $R$ to vector $x$:
-
-$$
-Rx = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 1 \\ 2 \end{pmatrix} = \begin{pmatrix} 0(1) + (-1)(2) \\ 1(1) + 0(2) \end{pmatrix} = \begin{pmatrix} -2 \\ 1 \end{pmatrix}
-$$
-
-Next, apply the scaling matrix $S$ to the resulting vector:
-
-$$
-SRx = \begin{pmatrix} 2 & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} -2 \\ 1 \end{pmatrix} = \begin{pmatrix} 2(-2) + 0(1) \\ 0(-2) + 1(1) \end{pmatrix} = \begin{pmatrix} -4 \\ 1 \end{pmatrix}
-$$
-
----
-
-Comparison:
-
-RSx = (-2, 2) and SRx = (-4, 1). Since RSx is not equal to SRx, the results are different.
-
-* **Geometric Explanation:** 
-  Transformation order matters because matrix multiplication is non-commutative. 
-  * In $RSx$, vector $x$ is stretched horizontally first, and then rotated by $90^\circ$ counterclockwise. 
-  * In $SRx$, the vector is rotated by $90^\circ$ counterclockwise first, and then the stretching is applied to the already rotated coordinates.
-
-* **Geometric Explanation:** 
-  Transformation order matters because matrix multiplication is non-commutative. 
-  * In $RSx$, vector $x$ is stretched horizontally first, and then rotated by $90^\circ$ counterclockwise. 
-  * In $SRx$, the vector is rotated by $90^\circ$ counterclockwise first, and then the stretching is applied to the already rotated coordinates.
+3. **Comparison and Geometric Explanation:**
+* Comparing our results:
+RSx = [-2; 2]
+SRx = [-4; 1]
+Therefore, **RSx != SRx**.
+* **Geometric Explanation:** Matrix multiplication corresponds to the composition of linear transformations. Computing $RSx$ means stretching the vector along the horizontal axis first and then rotating the modified vector 90° counterclockwise. In contrast, computing $SRx$ means rotating the vector 90° first and then applying the horizontal stretch. Because scaling and rotation do not commute geometrically—stretching a coordinate axis before rotating changes its final spatial orientation compared to stretching it after rotation—the order of operations changes the final outcome.
