@@ -1,55 +1,20 @@
-# Exercise 5: Matrix Times Vector
+## Question
 
-Given:
+Exercise 5. Matrix Times Vector
+Let:
+A = [2 -1; 1 3] and x = [4; 2]
+Compute Ax. Then express Ax as a linear combination of the columns of A, with coefficients coming from the vector x.
 
-$$
-A = \begin{pmatrix} 2 & -1 \\ 1 & 3 \end{pmatrix}
-$$
+## Solution
 
-and 
-
-$$
-x = \begin{pmatrix} 4 \\ 2 \end{pmatrix}
-$$
-
----
-
-## Step 1: Computing $Ax$
-
-To compute the matrix-vector product $Ax$ using the standard row-by-column method:
-
-$$
-Ax = \begin{pmatrix} 2 & -1 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} 4 \\ 2 \end{pmatrix}
-$$
-
-Calculating the entries row by row:
-
-$$
-Ax = \begin{pmatrix} (2 \cdot 4) + (-1 \cdot 2) \\ (1 \cdot 4) + (3 \cdot 2) \end{pmatrix}
-$$
-
-$$
-Ax = \begin{pmatrix} 8 - 2 \\ 4 + 6 \end{pmatrix} = \begin{pmatrix} 6 \\ 10 \end{pmatrix}
-$$
-
----
-
-## Step 2: Linear Combination of the Columns of $A$
-
-Expressing $Ax$ as a linear combination of the columns of $A$ using the entries of $x$ as coefficients:
-
-$$
-Ax = 4 \begin{pmatrix} 2 \\ 1 \end{pmatrix} + 2 \begin{pmatrix} -1 \\ 3 \end{pmatrix}
-$$
-
-Evaluating the scalar multiplications:
-
-$$
-Ax = \begin{pmatrix} 8 \\ 4 \end{pmatrix} + \begin{pmatrix} -2 \\ 6 \end{pmatrix}
-$$
-
-Adding the vectors together:
-
-$$
-Ax = \begin{pmatrix} 8 - 2 \\ 4 + 6 \end{pmatrix} = \begin{pmatrix} 6 \\ 10 \end{pmatrix}
-$$
+1. **Computing Ax:**
+Multiplying matrix A by vector x:
+Ax = [2 -1; 1 3] * [4; 2]
+Ax = [(2 × 4) + (-1 × 2); (1 × 4) + (3 × 2)]
+Ax = [8 + (-2); 4 + 6] = [6; 10]
+2. **Expressing Ax as a Linear Combination of Columns:**
+The columns of matrix A are:
+a1 = [2; 1] and a2 = [-1; 3]
+Using the entries of vector x (4 and 2) as the coefficients, Ax is expressed as a linear combination of A's columns:
+Ax = 4 * [2; 1] + 2 * [-1; 3]
+Ax = [8; 4] + [-2; 6] = [6; 10]
