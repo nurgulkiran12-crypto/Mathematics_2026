@@ -1,5 +1,3 @@
-Haklısın, sanırım `\det`, `\times` gibi LaTeX komutları da Copilot'un okuma ortamında bozulmaya yol açtı. Hiçbir ters bölü (`\`) veya LaTeX komutu kullanmadan, tamamen **saf düz metin (plain text)** formatıyla Exercise 3'ü yeniden düzenledim:
-
 ---
 
 ## Question
