@@ -1,4 +1,4 @@
-Haklısın, son soruda `\begin{pmatrix}` ve süslü parantezler kullandığım için Copilot yine hata vermiştir. Hemen matrisleri eskisi gibi **saf düz metin (köşeli parantez)** formatına çevirdim.
+
 
 Bunu doğrudan kopyalayıp yapıştırabilirsin:
 
