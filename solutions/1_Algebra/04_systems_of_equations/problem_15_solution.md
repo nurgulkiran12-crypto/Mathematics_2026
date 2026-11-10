@@ -3,9 +3,15 @@
 Exercise 15. Classifying Three Systems
 For each of the following systems, perform only as much elimination as necessary to recognize its type:
 
-* **System 1:** $\begin{cases} x + y = 2 \\ x - y = 0 \end{cases}$
-* **System 2:** $\begin{cases} x + y = 2 \\ 2x + 2y = 4 \end{cases}$
-* **System 3:** $\begin{cases} x + y = 2 \\ 2x + 2y = 5 \end{cases}$
+* **System 1:**
+x + y = 2
+x - y = 0
+* **System 2:**
+x + y = 2
+2x + 2y = 4
+* **System 3:**
+x + y = 2
+2x + 2y = 5
 
 For each, justify the classification: one solution, infinitely many solutions, or no solution.
 *(Why this exercise: demonstrates how minimal elimination or inspecting coefficient-to-constant ratios quickly reveals the structural type of linear systems without full back-substitution.)*
