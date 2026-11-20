@@ -17,36 +17,36 @@ Among the three possibilities — exactly one solution, infinitely many solution
 1. **Setting Up the Augmented Matrix:**
    - We write the linear system as an augmented matrix $[A \mid b]$:
 
-   $$
-   \begin{pmatrix}
-   1 & 1 & \big| & 2 \\
-   a & a & \big| & 4
-   \end{pmatrix}
-   $$
+$$
+\begin{pmatrix}
+1 & 1 & \mid & 2 \\
+a & a & \mid & 4
+\end{pmatrix}
+$$
 
 2. **Applying Gaussian Elimination:**
    - Eliminate the entry in the second row, first column by subtracting $a$ times the first row ($R_2 \leftarrow R_2 - aR_1$):
      - New row 2: $[a - a(1), \ a - a(1) \mid 4 - a(2)] = [0, \ 0 \mid 4 - 2a]$
    - The augmented matrix becomes:
 
-   $$
-   \begin{pmatrix}
-   1 & 1 & \big| & 2 \\
-   0 & 0 & \big| & 4 - 2a
-   \end{pmatrix}
-   $$
+$$
+\begin{pmatrix}
+1 & 1 & \mid & 2 \\
+0 & 0 & \mid & 4 - 2a
+\end{pmatrix}
+$$
 
 3. **Analyzing the Cases Based on the Parameter $a$:**
    - **Case 1: Infinitely Many Solutions ($a = 2$)**
      - If we substitute $a = 2$ into the right-hand side of the second row, we get $4 - 2(2) = 0$.
      - The matrix becomes:
 
-     $$
-     \begin{pmatrix}
-     1 & 1 & \big| & 2 \\
-     0 & 0 & \big| & 0
-     \end{pmatrix}
-     $$
+$$
+\begin{pmatrix}
+1 & 1 & \mid & 2 \\
+0 & 0 & \mid & 0
+\end{pmatrix}
+$$
 
      - This corresponds to the equation $x + y = 2$ (with $0 = 0$). Letting the free variable $y = t$, we get the parametric solution:
        - $x = 2 - t$
@@ -56,9 +56,9 @@ Among the three possibilities — exactly one solution, infinitely many solution
    - **Case 2: No Solution ($a \neq 2$)**
      - If $a \neq 2$, then $4 - 2a \neq 0$. The second row translates to:
 
-     $$
-     0x + 0y = 4 - 2a \implies 0 = \text{non-zero constant}
-     $$
+$$
+0x + 0y = 4 - 2a \implies 0 = \text{non-zero constant}
+$$
 
      - This is a mathematical contradiction, meaning the system is inconsistent. Therefore, for **all $a \neq 2$**, the system has **no solution**.
 
