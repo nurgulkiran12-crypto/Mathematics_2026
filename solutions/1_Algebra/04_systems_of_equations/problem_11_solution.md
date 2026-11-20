@@ -68,14 +68,9 @@ $$x = 1 - \frac{3}{t - 1} = \frac{(t - 1) - 3}{t - 1} = \frac{t - 4}{t - 1}$$
 Thus, for **all $t \neq 1$**, the system has **exactly one unique solution**:
 
 $$
-\begin{pmatrix}
-x \\
-y \\
-z
-\end{pmatrix}
-=
-\begin{pmatrix}
-\frac{t - 4}{t - 1} \\
-\frac{1}{t - 1} \\
-\frac{2}{t - 1}
-\end{pmatrix}
+\begin{cases}
+x = \frac{t - 4}{t - 1} \\
+y = \frac{1}{t - 1} \\
+z = \frac{2}{t - 1}
+\end{cases}
+$$
