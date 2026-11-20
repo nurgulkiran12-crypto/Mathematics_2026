@@ -25,36 +25,16 @@ x + y = 10 \\
 \end{cases}
 $$
 
-In matrix form $Ax = b$, this is written as:
+In augmented matrix form $[A \mid b]$, this is written as:
 
 $$
 \begin{pmatrix}
-1 & 1 \\
-2 & 5
-\end{pmatrix}
-\begin{pmatrix}
-x \\
-y
-\end{pmatrix}
-=
-\begin{pmatrix}
-10 \\
-32
-\end{pmatrix}
-$$
-x \\
-y
-\end{pmatrix}
-=
-\begin{pmatrix}
-10 \\
-32
+1 & 1 & \mid & 10 \\
+2 & 5 & \mid & 32
 \end{pmatrix}
 $$
 
 ### 2. Solving the System
-
-**Using Substitution:**
 
 From the first equation, isolate $x$:
 
