@@ -3,45 +3,88 @@
 Exercise 14. A Small Change in the Right-Hand Side
 Compare the systems:
 
+1. System 1:
 
-$$\begin{cases} x + y = 2 \\ 2x - y = 1 \\ 3x = 3 \end{cases}$$
+$$
+\begin{cases}
+x + y = 2 \\
+2x - y = 1 \\
+3x = 3
+\end{cases}
+$$
 
+2. System 2:
 
-and
-
-
-$$\begin{cases} x + y = 2 \\ 2x - y = 1 \\ 3x = 3.1 \end{cases}$$
-
+$$
+\begin{cases}
+x + y = 2 \\
+2x - y = 1 \\
+3x = 3.1
+\end{cases}
+$$
 
 Check the consistency of each system and explain why a small change in one number can change the type of the system.
-*(Why this exercise: illustrates how overdetermined systems with more equations than unknowns behave, and how sensitive they are to slight changes in the right-hand side vector.)*
 
 ## Solution
 
-1. **Analyzing System 1:**
-* Let's solve the first two equations simultaneously:
-* Adding Eq. 1 and Eq. 2: $(x + y) + (2x - y) = 2 + 1 \implies 3x = 3 \implies$ **$x = 1$**.
-* Substitute $x = 1$ into Eq. 1: $1 + y = 2 \implies$ **$y = 1$**.
+### 1. Consistency of System 1
 
+First, solve the first two equations to find where they intersect:
 
-* Now, check if this solution satisfies the third equation ($3x = 3$):
-* $3(1) = 3$, which is completely true.
+$$
+\begin{cases}
+x + y = 2 \\
+2x - y = 1
+\end{cases}
+$$
 
+Adding the two equations eliminates $y$:
 
-* **Conclusion for System 1:** The system has a unique solution $(x, y) = (1, 1)$ and is **consistent**. All three lines intersect at the exact same point in the 2D plane.
+$$
+(x + y) + (2x - y) = 2 + 1 \implies 3x = 3 \implies x = 1
+$$
 
+Substitute $x = 1$ into $x + y = 2$:
 
-2. **Analyzing System 2:**
-* The first two equations remain identical, uniquely fixing the intersection point at **$x = 1, y = 1$**.
-* Now, check the third equation ($3x = 3.1$) using $x = 1$:
-* $3(1) = 3.1 \implies 3 = 3.1$, which is a mathematical contradiction ($0 = 0.1$).
+$$
+1 + y = 2 \implies y = 1
+$$
 
+Now check the third equation ($3x = 3$) at $x = 1$:
 
-* **Conclusion for System 2:** Because no point can satisfy all three equations simultaneously, the system has **no solution** and is **inconsistent**.
+$$
+3(1) = 3
+$$
 
+The third equation holds without contradiction. Therefore, **System 1 is consistent** and has **one unique solution**: $(x, y) = (1, 1)$.
 
-3. **Explaining Why a Small Change Changes the System Type:**
-* **Geometric Perspective:** Each equation represents a straight line in the 2D plane. A system with two variables and three equations is *overdetermined* (more constraints than dimensions).
-* In **System 1**, the third line happens to pass directly through the intersection point of the first two lines, meaning all three lines share a common meeting point.
-* In **System 2**, changing the right-hand side from $3$ to $3.1$ shifts the third line slightly parallel to itself. While the first two lines still intersect at $(1, 1)$, the third line now requires $x = \frac{3.1}{3} \approx 1.033$. The three lines now form a triangle with three separate intersection vertices rather than a single common point.
-* This demonstrates that overdetermined systems are often **unstable to perturbations** in the right-hand side vector $b$ unless the perturbation lies precisely within the column space of the coefficient matrix.
+### 2. Consistency of System 2
+
+The first two equations remain unchanged, so their unique intersection is still $(x, y) = (1, 1)$, which requires $x = 1$.
+
+Now check the third equation ($3x = 3.1$) at $x = 1$:
+
+$$
+3(1) = 3 \neq 3.1
+$$
+
+In augmented matrix form for System 2:
+
+$$
+\begin{pmatrix}
+1 & 1 & \mid & 2 \\
+2 & -1 & \mid & 1 \\
+3 & 0 & \mid & 3.1
+\end{pmatrix}
+$$
+
+Eliminating the first two equations yields $x = 1$, and substituting into the third row gives $0 = 0.1$, a contradiction. Therefore, **System 2 is inconsistent** and has **no solution**.
+
+### 3. Why a Small Change Can Change the System Type
+
+An overdetermined system (three equations with only two unknowns $x$ and $y$) has a solution **only if** all three lines pass through the **exact same point**.
+
+* In **System 1**, the third line ($x = 1$) passes right through the intersection $(1, 1)$ of the first two lines, so all three share a common point.
+* Changing the right-hand side slightly from $3$ to $3.1$ shifts the third line from $x = 1$ to $x = \frac{3.1}{3} \approx 1.033$. Even a tiny shift moves the line off the point $(1, 1)$, so no single point satisfies all three equations at once.
+
+Geometrically, this illustrates **ill-conditioning / sensitivity to perturbation** in overdetermined systems: a small change in the data moves the constraints out of alignment and switches the system from **consistent (unique solution)** to **inconsistent (no solution)**.
