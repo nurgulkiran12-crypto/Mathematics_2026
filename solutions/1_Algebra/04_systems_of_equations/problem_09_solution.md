@@ -42,6 +42,15 @@ y
 32
 \end{pmatrix}
 $$
+x \\
+y
+\end{pmatrix}
+=
+\begin{pmatrix}
+10 \\
+32
+\end{pmatrix}
+$$
 
 ### 2. Solving the System
 
