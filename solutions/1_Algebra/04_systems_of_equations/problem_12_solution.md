@@ -59,5 +59,8 @@ In vector notation, all solutions are given by $(x, y, z) = t(-1, 1, 1)$ for $t 
 
 ### 4. Why $(0, 0, 0)$ Always Satisfies a Homogeneous System
 
-A homogeneous linear system has all constant terms on the right-hand side equal to zero ($Ax = 0$). When we substitute $(x, y, z) = (0, 0, 0)$into any linear equation of the form$a_1x + a_2y + a_3z = 0$, every term becomes zero:  $$
-a_1(0) + a_2(0) + a_3(0)
+A homogeneous linear system has all constant terms on the right-hand side equal to zero ($Ax = 0$). When we substitute $(x, y, z) = (0, 0, 0)$ into any linear equation of the form $a_1x + a_2y + a_3z = 0$, every term becomes zero:
+
+$$
+a_1(0) + a_2(0) + a_3(0) = 0 + 0 + 0 = 0
+$$
